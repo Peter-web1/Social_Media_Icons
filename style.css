@@ -1,0 +1,153 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;/*контент по центру*/
+    height: 100vh;/*выровнять по центру стр*/
+    text-align: center;/*текст в иконках в центре*/
+    background: #262626;
+}
+
+ul {
+    display: flex;/*разворот по горизонтали*/
+}
+
+ul li {
+    position: relative;
+    display: block;
+    color: #666;
+    font-size: 30px;
+    height: 60px;
+    width: 60px;
+    background: #171515;
+    line-height: 60px;/*опустить шрифт ниже и по центру*/
+    border-radius: 50%; /*сделать bg круглым*/
+    margin: 0 15px;/*растояние между иконками*/
+    cursor: pointer;
+    transition: .5s;/*скорость заполнения оранжевого эмблемка*/
+} 
+
+ul li:before {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    /* background: #d35400; */
+    /* замена цвета */
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;/*круглые вторые bg*/
+    z-index: -1;/*оранжевый фон под низ*/
+    transform: scale(0.9);/*исчез оранжевый ободок*/
+    transition: .5s;/*скорость заполнения оранжевого ободка*/
+}
+
+
+ul li:nth-child(1):before{
+    background: #4267b2;
+
+}
+
+ul li:nth-child(2):before{
+    background: #1da1f2;
+
+}
+
+ul li:nth-child(3):before{
+    background: #e1306c;
+
+}
+
+ul li:nth-child(4):before{
+    background: #2867b2;
+
+}
+
+ul li:nth-child(5):before{
+    background: #ff0000;
+
+}
+
+
+
+ul li:hover:before {
+    filter: blur(3px);/* фильтр рамытия */
+    transform: scale(1.2);/*диапозон расширения оранжевого ободка*/
+    /* box-shadow: 0 0 15px #d35400; */
+    /* замена цвета */
+}
+
+
+ul li:nth-child(1):hover:before {
+    box-shadow: 0 0 15px #4267b2;
+}
+
+ul li:nth-child(2):hover:before {
+    box-shadow: 0 0 15px #1da1f2;
+}
+
+ul li:nth-child(3):hover:before {
+    box-shadow: 0 0 15px #e1306c;
+}
+
+ul li:nth-child(4):hover:before {
+    box-shadow: 0 0 15px #2867b2;
+}
+
+ul li:nth-child(5):hover:before {
+    box-shadow: 0 0 15px #ff0000;
+}
+
+ul li:nth-child(6):hover:before {
+    box-shadow: 0 0 15px #d35400;
+}
+
+
+
+ul li:nth-child(1):hover {
+    /*color: #ffa502;внутренний шрифт иконки*/
+    /*box-shadow: 0 0 15px #d35400;тень*/
+    /*box-shadow: 0 0 15px #d35400;тень*/
+    /* замена цвета */
+    color: #456cba;
+    
+    text-shadow: 0 0 15px #4267b2;/*тень*/
+    box-shadow: 0 0 15px #4267b2;/*тень*/
+    
+}
+
+
+ul li:nth-child(2):hover {
+    color: #26a4f2;  
+    text-shadow: 0 0 15px #1da1f2;/*тень*/
+    box-shadow: 0 0 15px #1da1f2;/*тень*/
+}
+
+ul li:nth-child(3):hover {
+    color: #e23670; 
+    text-shadow: 0 0 15px #e1306c;/*тень*/
+    box-shadow: 0 0 15px #e1306c;/*тень*/  
+}
+
+ul li:nth-child(4):hover {
+    color: #2a6cbb;
+    text-shadow: 0 0 15px #2867b2;/*тень*/
+    box-shadow: 0 0 15px #2867b2;/*тень*/
+}
+
+ul li:nth-child(5):hover {
+    color: #ff1a1a;
+    text-shadow: 0 0 15px #ff0000;/*тень*/
+    box-shadow: 0 0 15px #ff0000;/*тень*/ 
+}
+
+ul li:nth-child(6):hover {
+    color: #ffa502;
+    text-shadow: 0 0 15px #d35400;/*тень*/
+    box-shadow: 0 0 15px #d35400;/*тень*/  
+}
